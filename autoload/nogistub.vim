@@ -27,7 +27,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 if !exists('g:nogistub_url')
-  let g:nogistub_url = "http://gistub-demo.seratch.net/"
+  let g:nogistub_url = "http://gistub-demo.seratch.net"
 endif
 
 function! s:get_current_filename(no)
