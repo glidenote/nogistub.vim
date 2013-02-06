@@ -10,11 +10,15 @@ Usage:
 
 - Post current buffer to gistub
 
-    :Nogistub
+```
+:Nogistub
+```
 
 - Post selected text to gistub
 
-    :'<,'>Nogistub
+```
+:'<,'>Nogistub
+```
 
 Options:
 ------
