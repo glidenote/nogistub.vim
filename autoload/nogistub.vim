@@ -84,16 +84,17 @@ function! s:open_browser(location)
   endif
 endfunction
 
-function! nogistub#nogistub(count, line1, line2, ...)
+function! nogistub#Nogistub(count, line1, line2, ...)
   let s:curl_cmd = 'curl -i'
   let s:url      = g:nogistub_url . "/gists"
+  let title      = s:get_current_filename(1)
+  let filename   = s:get_current_filename(1)
   let body       = join(getline(a:line1, a:line2), "\n")
-  let nick       = g:nogistub_nick
 
   " escape quotation
   let body = substitute(body, '"', '\\"', "g")
 
-  let post_data = ' --form-string "gits[title]=' . title . '"'
+  let post_data = ' --form-string "gist[title]=' . title . '"'
                   \ . ' --form-string "gist_file_names[]=' . filename . '"'
                   \ . ' --form-string "gist_file_bodies[]=' . body . '"'
 

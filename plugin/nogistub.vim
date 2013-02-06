@@ -33,8 +33,8 @@ if !executable('curl')
   finish
 endif
 
-command! -nargs=? -range=% nogistub :call
-      \ nogistub#nogistub(<count>, <line1>, <line2>, <f-args>)
+command! -nargs=? -range=% Nogistub :call
+      \ nogistub#Nogistub(<count>, <line1>, <line2>, <f-args>)
 
 " __END__
 " vim: set et:
